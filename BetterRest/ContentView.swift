@@ -21,6 +21,17 @@ struct ContentView: View {
         }
         
     }
+    
+    func trivialExample(){
+        let now = Date.now
+        let tomorrow = now.addingTimeInterval(86400)
+        let range = now...tomorrow
+        
+        var components = DateComponents()
+        components.hour = 8
+        components.minute = 0
+        let date = Calendar.current.date(from: components) ?? Date.now
+    }
         
 }
 
